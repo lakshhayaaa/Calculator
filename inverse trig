@@ -1,0 +1,61 @@
+import math
+def sin():
+    x=float(input("Enter a number between -1 and 1:"))
+    if x>=-1 and x<=1:
+        res=math.asin(x)
+        print("sin inverse of ",x," in radians:",res)
+        print("sin inverse of ",x," in degrees:",math.degrees(res))
+    else:
+        print("Input out of range")
+def cos():
+    x=float(input("Enter a number between -1 and 1:"))
+    if x>=-1 and x<=1:
+        res=math.acos(x)
+        print("cos inverse of ",x," in radians:",res)
+        print("cos inverse of ",x," in degrees:",math.degrees(res))
+    else:
+        print("Input out of range")
+    
+def tan():
+    x=float(input("Enter a number:"))
+    res=math.atan(x)
+    print("tan inverse of ",x," in radians:",res)
+    print("tan inverse of ",x," in degrees:",math.degrees(res))
+    
+def sec():
+    x=float(input("Enter a less than or equal to -1 or greater than or equal to 1:"))
+    if x<=-1 or x>=1:
+        res=math.acos(1/x)
+        print("sec inverse of ",x," in radians:",res)
+        print("sec inverse of ",x," in degrees:",math.degrees(res))
+    else:
+        print("Input out of range")
+def cosec():
+    x=float(input("Enter a less than or equal to -1 or greater than or equal to 1:"))
+    if x<=-1 or x>=1:
+        res=math.asin(1/x)
+        print("cosec inverse of ",x," in radians:",res)
+        print("cosec inverse of ",x," in degrees:",math.degrees(res))
+    else:
+        print("Input out of range")
+def cot():
+    x=float(input("Enter a number:"))
+    res=math.atan(1/x)
+    print("cot inverse of ",x," in radians:",res)
+    print("cot inverse of ",x," in degrees:",math.degrees(res))
+
+print("Enter the  trig function whose inverse is to be calculated:[sin/cos/tan/cosec/sec/cot]")
+s=input()
+if s=="sin":
+    sin()
+if s=="cos":
+    cos()
+if s=="tan":
+    tan()
+if s=="cosec":
+    cosec()
+if s=="sec":
+    sec()
+if s=="cot":
+    cot()
+
