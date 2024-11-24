@@ -1,0 +1,12 @@
+print("Hello!\nEnter the expression that needs to be calculated\nInput x and press enter to exit")
+print("Basic functions(+,-,/,*,**,//,%,(),|,&,^,>>,<<)")
+e=" "
+while e!="x":
+    e=input("")
+    try:
+        if e!="x": print(eval(e))
+    except:
+        print("Unexpected format/character recognised please try again")
+
+else:
+    print("Exited")
