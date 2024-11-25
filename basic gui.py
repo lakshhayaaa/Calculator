@@ -1,10 +1,10 @@
 import tkinter as tk
 
-window = tk.Tk()
+window=tk.Tk()
 window.title("Calculator App")
 window.geometry("800x600")
 
-expression = ""
+expression=""
 
 display=tk.StringVar()
 display.set("")  
@@ -14,10 +14,10 @@ def click(thing):
     expression+=str(thing)  
     display.set(expression)  
     
-title = tk.Label(window, text="Calculator", font=("Times New Roman", 20))
+title=tk.Label(window, text="Calculator", font=("Times New Roman", 20))
 title.pack(pady=20)
 
-label = tk.Label(window, textvariable=display, font=("Times New Roman", 16), fg="blue", bg="white", width=30)
+label=tk.Label(window, textvariable=display, font=("Times New Roman", 16), fg="blue", bg="white", width=30)
 label.pack(pady=10)
 
 #the buttons:
