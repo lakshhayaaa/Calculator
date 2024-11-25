@@ -1,12 +1,16 @@
-print("Hello!\nEnter the expression that needs to be calculated\nInput x and press enter to exit")
-print("Basic functions(+,-,/,*,**,//,%,(),|,&,^,>>,<<)")
-e=" "
-while e!="x":
-    e=input("")
+import math
+print("Hello!")
+print("Supported operations(+,-,/,,*,//,%,(),|,&,^,>>,<<)")
+print("Trig functions: sin(x), cos(x), tan(x) (x in radians)")
+print("Logarithmic functions: log(x) (base 10), log2(x), log10(x), ln(x) (natural log)")
+print("Type 'END' to exit the calculator.")
+while True:
+    e=input("Enter your calculation: ").strip()
+    if e.upper() == "END":
+        print("Exited")
+        break
     try:
-        if e!="x": print(eval(e))
+        if e!="x": 
+            print(eval(e,math._dict_))
     except:
         print("Unexpected format/character recognised please try again")
-
-else:
-    print("Exited")
